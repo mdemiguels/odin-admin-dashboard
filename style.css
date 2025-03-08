@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
 :root {
-    --primary-bg-color: #FFF;
-    --secondary-bg-color: #000;
+    --aside-bg-color: #1892d5;
+    --aside-font-color: #fff;
+    --header-bg-color: #fff;
+    --main-bg-color: #e2e9f1;
 }
 
 * {
@@ -11,23 +15,54 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     height: 100vh;
     display: grid;
-    grid-template: 1fr 4fr / repeat(4, 1fr);
+    grid-template: 1fr 4fr / repeat(5, 1fr);
+}
+
+h2 {
+    font-size: 30px;
 }
 
 aside {
-    background-color: blue;
+    background-color: var(--aside-bg-color);
     grid-row: 1 / 3;
+    color: var(--aside-font-color);
+    display: grid;
+    gap: 50px;
+    align-content: flex-start;
+    padding: 20px;
+}
+
+.sidebar-header, .section {
+    display: grid;
+    grid-template: 1fr / 1fr 5fr;
+    align-items: center;
+    margin: 0px 40px 20px 0px;
+}
+
+.section a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--aside-font-color);
+}
+
+.sidebar-header svg {
+    width: 50px;
+}
+
+aside svg {
+    fill: var(--aside-font-color);
+    width: 25px;
 }
 
 header {
-    background-color: red;
-    grid-column: 2 / 5;
+    background-color: var(--header-bg-color);
+    grid-column: 2 / 6;
 }
 
 main {
-    background-color: coral;
-    grid-column: 2 / 5;
+    background-color: var(--main-bg-color);
+    grid-column: 2 / 6;
 }
