@@ -4,6 +4,7 @@
     --aside-bg-color: #1892d5;
     --aside-font-color: #fff;
     --header-bg-color: #fff;
+    --buttons-bg-color: #1892d5;
     --main-bg-color: #e2e9f1;
 }
 
@@ -59,7 +60,92 @@ aside svg {
 
 header {
     background-color: var(--header-bg-color);
+    font-weight: bold;
     grid-column: 2 / 6;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+header svg {
+    width: 30px;
+}
+
+.search-container {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.search-container input {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-bg-color);
+    padding: 0 10px;
+}
+
+.search-container input:focus {
+    outline: none;
+    border: 2px solid var(--aside-bg-color);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-container img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.greatings-container {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.greatings-container img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.greatings-container span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.greatings-container p {
+    font-size: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.buttons-container button {
+    width: 100px;
+    height: 35px;
+    background-color: var(--buttons-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 main {
